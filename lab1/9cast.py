@@ -1,0 +1,7 @@
+x=int(1.5)
+y=int("2")
+print(x,y)
+x=float(5)
+y=float("2.6")
+z=float("5")
+print(x,y,z)
