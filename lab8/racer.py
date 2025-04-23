@@ -5,6 +5,9 @@ img_resized.save("/Users/alialesov/Desktop/labs/lab8/racer_textures/coin_resized
 img=Image.open("/Users/alialesov/Desktop/labs/lab8/racer_textures/AnimatedStreet.png")
 img_resized=img.resize((400,600))
 img_resized.save("/Users/alialesov/Desktop/labs/lab8/racer_textures/AnimatedStreet_resized.png")
+img=Image.open("/Users/alialesov/Desktop/labs/lab8/racer_textures/coin2.png")
+img_resized=img.resize((45,45))
+img_resized.save("/Users/alialesov/Desktop/labs/lab8/racer_textures/coin_resized.png")
 
 import pygame, sys
 from pygame.locals import *
@@ -87,8 +90,12 @@ class Coin(pygame.sprite.Sprite):
             self.reset_position()
 
     def reset_position(self):
-        self.rect.top = 0
-        self.rect.center = (random.randint(70, 330), 0)
+        while True:
+            new_x = random.randint(70, 330)
+            self.rect.center = (new_x, 0)
+            if not self.rect.colliderect(E1.rect):
+                  # Проверяем пересечение с врагом
+                break
 
 # Setting up Sprites        
 P1 = Player()
@@ -143,9 +150,9 @@ while True:
         sys.exit()
 
     if pygame.sprite.spritecollideany(P1, coins):
-        COINS += 1
+        COINS += (random.randint(1,2))
         C1.reset_position()
         pygame.mixer.Sound('/Users/alialesov/Desktop/labs/lab8/racer_textures/coin.wav').play()
-            
+          
     pygame.display.update()
     FramePerSec.tick(FPS)

@@ -5,13 +5,13 @@ pygame.init()
 screen = pygame.display.set_mode((920, 700))
 clock = pygame.time.Clock()
 
-image = pygame.image.load('Lab7/Clock.png')
+image = pygame.image.load("/Users/alialesov/Desktop/labs/lab7/clock.png")
 image = pygame.transform.scale(image, (600, 600))
 
-minute_img = pygame.image.load('Lab7/Hand.png')
-minute_img = pygame.transform.scale(minute_img, (600, 400))
-second_img = pygame.image.load('Lab7/Hand.png')
-second_img = pygame.transform.scale(second_img, (600, 400))
+minute_img = pygame.image.load("/Users/alialesov/Desktop/labs/lab7/min_hand.png")
+minute_img = pygame.transform.scale(minute_img, (600, 600))
+second_img = pygame.image.load("/Users/alialesov/Desktop/labs/lab7/sec_hand.png")
+second_img = pygame.transform.scale(second_img, (600, 600))
 
 done = False
 

@@ -21,7 +21,7 @@ sld=pygame.image.load("/Users/alialesov/Desktop/labs/lab8/snake/snake13.png")
 meat=pygame.image.load("/Users/alialesov/Desktop/labs/lab8/snake/meat.png") #food
 gap=pygame.transform.scale(pygame.image.load("/Users/alialesov/Desktop/labs/lab8/snake/gapple.png"),(40,40))
 crab=pygame.transform.scale(pygame.image.load("/Users/alialesov/Desktop/labs/lab8/snake/crabsb.png"),(40,40)) #great food
-food=random.choice((meat,gap)) #random
+food=random.choice((meat,gap,crab)) #random
 liof=[sb] #lenth of body
 
 ship=pygame.image.load("/Users/alialesov/Desktop/labs/lab8/snake/shipi.png") #border
@@ -31,7 +31,7 @@ lv3=pygame.transform.scale(pygame.image.load("/Users/alialesov/Desktop/labs/lab8
 
 lv1.fill((0,0,0))
 fps=8 #fps
-lens=1 #lenth of body
+lens=1 #length of body
 sur=True #survival of snake
 done=True 
 x=W/2
